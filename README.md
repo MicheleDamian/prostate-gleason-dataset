@@ -26,7 +26,7 @@ sns.distplot(train_cnt, ax=ax0)
 sns.distplot(test_cnt, ax=ax1)
 ```
 
-***[add class distibution]***
+![Class distribution](./class_dist.png)
 
 My hope is to help improving ML-based prostate-cancer assessment by providing a novel patch labelled dataset. 
 
