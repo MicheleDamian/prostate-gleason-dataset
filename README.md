@@ -1,4 +1,6 @@
 [![prostate-cancer-dataset release](https://raster.shields.io/badge/release-v0.1-blue?style=plastic)](https://github.com/MicheleDamian/prostate-cancer/releases)
+[![prostate-cancer-dataset size](https://raster.shields.io/badge/train-65041-green?style=plastic)](https://github.com/MicheleDamian/prostate-cancer/releases)
+[![prostate-cancer-dataset size](https://raster.shields.io/badge/test-7416-orange?style=plastic)](https://github.com/MicheleDamian/prostate-cancer/releases)
 [![prostate-cancer-dataset size](https://raster.shields.io/badge/size-1.8G-blue?style=plastic)](https://github.com/MicheleDamian/prostate-cancer/releases)
 
 [![prostate-cancer-dataset license](https://licensebuttons.net/l/by-nc-sa/4.0/80x15.png)](https://creativecommons.org/licenses/by-nc-sa/4.0)
@@ -46,7 +48,7 @@ The *Prostate Gleason Dataset* brings mainly 2 contributions:
 ## Parent Dataset Overview
 ---
 
-About 11K whole-slide images of H&E-stained biopsies. The images where collected from different scanners at the Radboud University Medical Center and Karolinska Institute. The former institution used a 3DHistech Pannoramic Flash II 250 scanner at 20x magnification and stored the final image at a pixel resolution of 0.48μm. The later used a Hamamatsu C9600-12 scanner and a Aperio ScanScope AT2 scanner, obtaining a pixel resolution of 0.45202μm and 0.5032μm respectively.
+10616 whole-slide images of H&E-stained biopsies. The images where collected from different scanners at the Radboud University Medical Center and Karolinska Institute. The former institution used a 3DHistech Pannoramic Flash II 250 scanner at 20x magnification and stored the final image at a pixel resolution of 0.48μm. The later used a Hamamatsu C9600-12 scanner and a Aperio ScanScope AT2 scanner, obtaining a pixel resolution of 0.45202μm and 0.5032μm respectively. The smallest image in the dataset has an area of 2304x4352 pixels and the largest is 55296x73728 pixels.
 
 Part of the images were obtained from slices of the same biopsy and therefore they belong to the same patient.
 
@@ -67,7 +69,7 @@ The parent dataset is filtered by Gleason score and just images with **equal pri
   
 * *Gleason 3+3, 4+4, or 5+5*: a patch is kept if the number of Gleason X pixels is >=75% of the area of the patch, accordingly with the mask; **classes 1, 2 and 3** are produced for Gleason grades 3, 4 and 5 respectively.
 
-In order to remove noisy entries, all the remaining patches went through a manual labelling step (using the same 75% background threshold used with the mask) and they were finally resized to 256x256 pixels using nearest neighboor interpolation. It follows that the final pixel resolution is in the range from **0.90404μm** to **1.0064μm**, depending on the scanner used. Arguably, this pixel resolution and the selected patch size provide the best compromise between the resolution at the celular/glandular level, the goodness of the contextual information in the visual field and the dataset size.
+In order to remove noisy entries, all the remaining patches went through a manual labelling step and they were finally resized to 256x256 pixels using nearest neighboor interpolation. It follows that the final pixel resolution is in the range from **0.90404μm** to **1.0064μm**, depending on the scanner used. Arguably, this pixel resolution and the selected patch size provide the best compromise between the resolution at the cellular/glandular level, the goodness of the contextual information in the visual field and the dataset size.
 
 
 ## Dataset Stats
