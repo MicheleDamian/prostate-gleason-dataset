@@ -1,7 +1,7 @@
 [![prostate-cancer-dataset release](https://raster.shields.io/badge/release-v0.1-blue?style=plastic)](https://github.com/MicheleDamian/prostate-cancer/releases)
 [![prostate-cancer-dataset size](https://raster.shields.io/badge/train-65041-green?style=plastic)](https://github.com/MicheleDamian/prostate-cancer/releases)
 [![prostate-cancer-dataset size](https://raster.shields.io/badge/test-7416-orange?style=plastic)](https://github.com/MicheleDamian/prostate-cancer/releases)
-[![prostate-cancer-dataset size](https://raster.shields.io/badge/size-1.8G-blue?style=plastic)](https://github.com/MicheleDamian/prostate-cancer/releases)
+[![prostate-cancer-dataset size](https://raster.shields.io/badge/size-2.4G-blue?style=plastic)](https://github.com/MicheleDamian/prostate-cancer/releases)
 
 [![prostate-cancer-dataset license](https://licensebuttons.net/l/by-nc-sa/4.0/80x15.png)](https://creativecommons.org/licenses/by-nc-sa/4.0)
 
