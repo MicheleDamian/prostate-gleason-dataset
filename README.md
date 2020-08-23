@@ -11,22 +11,14 @@
 
 ![Examples](./examples.png)
 
-*Prostate Gleason Dataset* is an image database of prostate cancer biopsies derived from the [PANDA dataset](https://www.kaggle.com/c/prostate-cancer-grade-assessment/overview). The database consists of about **50K patches** of size **256x256 pixels** extracted from the PANDA's biopsies without overlap. Each patch is associated to a [Gleason grade](https://en.wikipedia.org/wiki/Gleason_grading_system). The patches are grouped in **4 classes** (Background + Stroma + Gleason 0, 1, 2; Gleason 3; Gleason 4; Gleason 5) with the following distribution:
+*Prostate Gleason Dataset* is an image database of prostate cancer biopsies derived from the [PANDA dataset](https://www.kaggle.com/c/prostate-cancer-grade-assessment/overview). The database consists of about **70K patches** of size **256x256 pixels** extracted from the PANDA's biopsies without overlap. The patches are grouped in **4 classes** depending on their [Gleason grade](https://en.wikipedia.org/wiki/Gleason_grading_system):
 
-```python
-import pandas as pd
-import seaborn as sns
-from matplotlib import pyplot as plt
+* **Class 0**: Stroma + Gleason 0 
+* **Class 1**: Gleason 3 
+* **Class 2**: Gleason 4 
+* **Class 3**: Gleason 5 
 
-train = pd.read_csv('train.csv')
-test = pd.read_csv('test.csv')
-train_cnt = train.groupby('gleason').count()
-test_cnt = test.groupby('gleason').count()
-
-f, (ax0, ax1) = plt.subplots(1, 2)
-sns.distplot(train_cnt, ax=ax0)
-sns.distplot(test_cnt, ax=ax1)
-```
+resulting in the following dataset distribution:
 
 ![Class distribution](./class_dist.png)
 
@@ -65,7 +57,7 @@ The parent dataset is filtered by Gleason score and just images with **equal pri
 * *Gleason 0+0*: two different classes A and B are produced:
   - for class A a patch is kept if the number of stroma pixels is >=75% of the area of the patch, accordingly with the mask;
   - for class B a patch is kept if the number of Gleason 0 pixels is >=75% of the area of the patch, accordingly with the mask;
-  - ~10K patches are sampled from each class and the two sets are merged to produce **class 0**
+  - the two subsets are merged to produce **class 0**
   
 * *Gleason 3+3, 4+4, or 5+5*: a patch is kept if the number of Gleason X pixels is >=75% of the area of the patch, accordingly with the mask; **classes 1, 2 and 3** are produced for Gleason grades 3, 4 and 5 respectively.
 
