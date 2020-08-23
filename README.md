@@ -11,14 +11,14 @@
 
 ![Examples](./examples.png)
 
-*Prostate Gleason Dataset* is an image database of prostate cancer biopsies derived from the [PANDA dataset](https://www.kaggle.com/c/prostate-cancer-grade-assessment/overview). The database consists of about **70K patches** of size **256x256 pixels** extracted from the PANDA's biopsies without overlap. The patches are grouped in **4 classes** depending on their [Gleason grade](https://en.wikipedia.org/wiki/Gleason_grading_system):
+*Prostate Gleason Dataset* is an image database of prostate cancer biopsies derived from the [PANDA dataset](https://www.kaggle.com/c/prostate-cancer-grade-assessment/overview). The database consists of about **70K patches** of size **256x256 pixels** extracted from the PANDA's biopsies *with overlap*. The patches are grouped in **4 classes** depending on their [Gleason grade](https://en.wikipedia.org/wiki/Gleason_grading_system):
 
 * **Class 0**: Stroma + Gleason 0 
 * **Class 1**: Gleason 3 
 * **Class 2**: Gleason 4 
 * **Class 3**: Gleason 5 
 
-resulting in the following dataset distribution:
+resulting in the following dataset distributions:
 
 ![Class distribution](./class_dist.png)
 
