@@ -67,11 +67,7 @@ In order to remove noisy entries, all the remaining patches went through a manua
 ## Dataset Stats
 ---
 
-Following are 
-
-***[hist biopsies per patient]***
-
-***[log hist patches per biopsy]***
+![Biopsy distribution](./biopsy_dist.png)
 
 
 ## Models
