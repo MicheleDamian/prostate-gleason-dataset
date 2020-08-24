@@ -74,13 +74,6 @@ In order to remove noisy entries, all the remaining patches went through a manua
 ---
 
 
-***[efficientNet]***
-
-***[resNet]***
-
-***[resNext]***
-
-
 ## Limitations and Future Work
 ---
 
