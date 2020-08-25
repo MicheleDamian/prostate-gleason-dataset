@@ -74,12 +74,14 @@ In order to remove noisy entries, all the remaining patches went through a manua
 ---
 
 | Model                                               | Accuracy | Training Time x Epoch (s) |
-|:----------------------------------------------------|---------:|--------------------------:|
-| [ResNeXt 50 32x4d](./models/resnext-50-32x4d.pth)   |    87.4% |                       251 |
-| ResNeXt 101 32x8d                                   |    87.4% |                       619 |
-| [EfficientNet B0](./models/efficientnet-b0.pth)     |    87.4% |                       244 |
-| [EfficientNet B1](./models/efficientnet-b1.pth)     |    87.7% |                       315 |
-| [EfficientNet B2](./models/efficientnet-b2.pth)     |    88.2% |                       329 |
+|:--------------------------------------------------------------------------------------------------------------|---------:|--------------------------:|
+| [ResNeXt 50 32x4d](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/resnext-50-32x4d.pth)   |    87.4% |                       251 |
+| [ResNeXt 101 32x8d](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/resnext-101-32x8d.pth) |    87.4% |                       619 |
+| [WideResNet 50](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/wideresnet-50.pth)         |    87.7% |                       252 |
+| [WideResNet 101](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/wideresnet-101.pth)       |    87.7% |                       252 |
+| [EfficientNet B0](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/efficientnet-b0.pth)     |    87.4% |                       244 |
+| [EfficientNet B1](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/efficientnet-b1.pth)     |    87.7% |                       315 |
+| [EfficientNet B2](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/efficientnet-b2.pth)     |    88.2% |                       329 |
 
 
 
