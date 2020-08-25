@@ -7,6 +7,7 @@
 
 
 # Prostate Gleason Dataset
+
 ---
 
 ![Examples](./examples.png)
@@ -38,6 +39,7 @@ The *Prostate Gleason Dataset* brings mainly 2 contributions:
 
 
 ## Parent Dataset Overview
+
 ---
 
 10616 whole-slide images of H&E-stained biopsies. The images where collected from different scanners at the Radboud University Medical Center and Karolinska Institute. The former institution used a 3DHistech Pannoramic Flash II 250 scanner at 20x magnification and stored the final image at a pixel resolution of 0.48μm. The later used a Hamamatsu C9600-12 scanner and a Aperio ScanScope AT2 scanner, obtaining a pixel resolution of 0.45202μm and 0.5032μm respectively. The smallest image in the dataset has an area of 2304x4352 pixels and the largest is 55296x73728 pixels.
@@ -50,6 +52,7 @@ Furthermore, the biopsies comes with a ML-predicted mask bringing (relatively no
 
 
 ## Derivation Process
+
 ---
 
 The parent dataset is filtered by Gleason score and just images with **equal primary and secondary patterns** are kept (Gleason 0+0, 3+3, 4+4 and 5+5). This aims to ensure the final patches don't contain non-omogeneous Gleason grades. The remaining images are divided into 512x512 pixels overlapping patches (stride 256 pixels). Then, 2 different filtering processes were used depending on wether the biopsy's Gleason score was equal to 0+0 or greater:
@@ -63,20 +66,17 @@ The parent dataset is filtered by Gleason score and just images with **equal pri
 
 In order to remove noisy entries, all the remaining patches went through a manual labelling step and they were finally resized to 256x256 pixels using nearest neighboor interpolation. It follows that the final pixel resolution is in the range from **0.90404μm** to **1.0064μm**, depending on the scanner used. Arguably, this pixel resolution and the selected patch size provide the best compromise between the resolution at the cellular/glandular level, the goodness of the contextual information in the visual field and the dataset size.
 
-
-## Dataset Stats
----
-
 ![Biopsy distribution](./biopsy_dist.png)
 
 
 ## Models
+
 ---
 
 | Model                                               | Accuracy | Training Time x Epoch (s) |
 |:----------------------------------------------------|---------:|--------------------------:|
 | [ResNeXt 50 32x4d](./models/resnext-50-32x4d.pth)   |    87.4% |                       251 |
-| [ResNeXt 101 32x8d](./models/resnext-101-32x4d.pth) |        % |                           |
+| [ResNeXt 101 32x8d](./models/resnext-101-32x8d.pth) |    87.4% |                       619 |
 | [EfficientNet B0](./models/efficientnet-b0.pth)     |    87.4% |                       244 |
 | [EfficientNet B1](./models/efficientnet-b1.pth)     |    87.7% |                       315 |
 | [EfficientNet B2](./models/efficientnet-b2.pth)     |    88.2% |                       329 |
@@ -84,5 +84,6 @@ In order to remove noisy entries, all the remaining patches went through a manua
 
 
 ## Limitations and Future Work
+
 ---
 
