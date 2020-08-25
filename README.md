@@ -73,6 +73,12 @@ In order to remove noisy entries, all the remaining patches went through a manua
 ## Models
 ---
 
+| Model                                           | Accuracy | Training Time x Epoch (s) |
+|:------------------------------------------------|---------:|--------------------------:|
+| [EfficientNet B0](./models/efficientnet-b0.pth) |    87.4% |                       244 |
+| [EfficientNet B1](./models/efficientnet-b1.pth) |    87.7% |                       315 |
+| [EfficientNet B2](./models/efficientnet-b2.pth) |    88.2% |                       329 |
+
 
 ## Limitations and Future Work
 ---
