@@ -76,7 +76,7 @@ In order to remove noisy entries, all the remaining patches went through a manua
 | Model                                               | Accuracy | Training Time x Epoch (s) |
 |:----------------------------------------------------|---------:|--------------------------:|
 | [ResNeXt 50 32x4d](./models/resnext-50-32x4d.pth)   |    87.4% |                       251 |
-| [ResNeXt 101 32x8d](./models/resnext-101-32x8d.pth) |    87.4% |                       619 |
+| ResNeXt 101 32x8d                                   |    87.4% |                       619 |
 | [EfficientNet B0](./models/efficientnet-b0.pth)     |    87.4% |                       244 |
 | [EfficientNet B1](./models/efficientnet-b1.pth)     |    87.7% |                       315 |
 | [EfficientNet B2](./models/efficientnet-b2.pth)     |    88.2% |                       329 |
