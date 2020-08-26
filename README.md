@@ -75,10 +75,7 @@ In order to remove noisy entries, all the remaining patches went through a manua
 
 ---
 
-For convinience, a collection of pre-trained models is provided. All models were trained using the following setu-up:
-
-* 1cycle scheduler with max LR selected with LR-range finder;
-* Batch
+For convinience, a collection of PyTorch pre-trained models is provided:
 
 
 | Model | Accuracy | Training Time x Epoch (s)<sup>✦</sup> |
@@ -92,11 +89,26 @@ For convinience, a collection of pre-trained models is provided. All models were
 | [EfficientNet B2<sup>✷</sup>](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/efficientnet-b2.pth)     |    88.2% |                         329 |
 
 
-<sup>✦</sup> training on a NVIDIA® V100 Tensor Core GPU
+<sup>✦</sup> training on a NVIDIA® V100 Tensor Core GPU (batch size = 64)
 
 <sup>✶</sup> implementation by [pytorch](https://github.com/pytorch/vision/tree/master/torchvision/models) 
 
 <sup>✷</sup> implementation by [lukemelas](https://github.com/lukemelas/EfficientNet-PyTorch) 
+
+All models were trained using [mixed precision](https://arxiv.org/abs/1710.03740) and can be loaded with the standard procedure used in PyTorch:
+
+
+```
+import torch
+from torchvision import models
+
+!curl {S3_PATH} -o {LOCAL_PATH}
+
+# Let's load a ResNeXt model
+
+model = models.resnext_50_32x4d(pretrained=False, num_classes=4)
+model.load_state_dict(torch.load(LOCAL_PATH))
+```
 
 
 ## Limitations and Future Work
