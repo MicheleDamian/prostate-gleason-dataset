@@ -81,18 +81,22 @@ For convinience, a collection of pre-trained models is provided. All models were
 * Batch
 
 
-| Model                                                                                                         | Accuracy | Training Time x Epoch (s) ✢ |
+| Model | Accuracy | Training Time x Epoch (s)<sup>✦</sup> |
 |:--------------------------------------------------------------------------------------------------------------|---------:|----------------------------:|
-| [ResNeXt 50 32x4d](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/resnext-50-32x4d.pth)   |    87.4% |                         251 |
-| [ResNeXt 101 32x8d](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/resnext-101-32x8d.pth) |    87.4% |                         619 |
-| [WideResNet 50](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/wideresnet-50.pth)         |    87.7% |                         252 |
-| [WideResNet 101](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/wideresnet-101.pth)       |    87.7% |                         414 |
-| [EfficientNet B0](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/efficientnet-b0.pth)     |    87.4% |                         244 |
-| [EfficientNet B1](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/efficientnet-b1.pth)     |    87.7% |                         315 |
-| [EfficientNet B2](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/efficientnet-b2.pth)     |    88.2% |                         329 |
+| [ResNeXt 50 32x4d<sup>✶</sup>](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/resnext-50-32x4d.pth)   |    87.4% |                         251 |
+| [ResNeXt 101 32x8d<sup>✶</sup>](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/resnext-101-32x8d.pth) |    87.4% |                         619 |
+| [WideResNet 50<sup>✶</sup>](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/wideresnet-50.pth)         |    87.7% |                         252 |
+| [WideResNet 101<sup>✶</sup>](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/wideresnet-101.pth)       |    87.7% |                         414 |
+| [EfficientNet B0<sup>✷</sup>](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/efficientnet-b0.pth)     |    87.4% |                         244 |
+| [EfficientNet B1<sup>✷</sup>](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/efficientnet-b1.pth)     |    87.7% |                         315 |
+| [EfficientNet B2<sup>✷</sup>](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/efficientnet-b2.pth)     |    88.2% |                         329 |
 
 
-✢ training on a NVIDIA® V100 Tensor Core GPU
+<sup>✦</sup> training on a NVIDIA® V100 Tensor Core GPU
+
+<sup>✶</sup> implementation by [pytorch](https://github.com/pytorch/vision/tree/master/torchvision/models) 
+
+<sup>✷</sup> implementation by [lukemelas](https://github.com/lukemelas/EfficientNet-PyTorch) 
 
 
 ## Limitations and Future Work
