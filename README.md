@@ -58,7 +58,7 @@ Furthermore, the biopsies comes with a ML-predicted mask bringing (relatively no
 
 The parent dataset is filtered by Gleason score and just images with **equal primary and secondary patterns** are kept (Gleason 0+0, 3+3, 4+4 and 5+5). This aims to ensure the final patches don't contain non-omogeneous Gleason grades. The remaining images are divided into 512x512 pixels overlapping patches (stride 256 pixels). Then, 2 different filtering processes were used depending on wether the biopsy's Gleason score was equal to 0+0 or greater:
 
-* *Gleason 0+0*: two different classes A and B are produced:
+* *Gleason 0+0*, two different classes A and B are produced:
   - for class A a patch is kept if the number of stroma pixels is >=75% of the area of the patch, accordingly with the mask;
   - for class B a patch is kept if the number of Gleason 0 pixels is >=75% of the area of the patch, accordingly with the mask;
   - the two subsets are merged to produce **class 0**
