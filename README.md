@@ -23,6 +23,7 @@ resulting in the following dataset distributions:
 
 ![Class distribution](./class_dist.png)
 
+
 My hope is to help improving ML-based prostate-cancer assessment by providing a novel patch labelled dataset. 
 
 Current computational pathology is usually based on labels of whole slide images of biopsies where the labels are ISUP grades or Gleason composite scores. These labels tend to be noisy and non-informative at the cellular/glandular level, for they provide information derived from large, non-contigous and non-omogeneous (w.r.t. the cellular/glandular visual properties of the cancer) areas of the biopsies. 
@@ -66,6 +67,7 @@ The parent dataset is filtered by Gleason score and just images with **equal pri
 
 In order to remove noisy entries, all the remaining patches went through a manual labelling step and they were finally resized to 256x256 pixels using nearest neighboor interpolation. It follows that the final pixel resolution is in the range from **0.90404μm** to **1.0064μm**, depending on the scanner used. Arguably, this pixel resolution and the selected patch size provide the best compromise between the resolution at the cellular/glandular level, the goodness of the contextual information in the visual field and the dataset size.
 
+
 ![Biopsy distribution](./biopsy_dist.png)
 
 
@@ -73,16 +75,24 @@ In order to remove noisy entries, all the remaining patches went through a manua
 
 ---
 
-| Model                                               | Accuracy | Training Time x Epoch (s) |
-|:--------------------------------------------------------------------------------------------------------------|---------:|--------------------------:|
-| [ResNeXt 50 32x4d](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/resnext-50-32x4d.pth)   |    87.4% |                       251 |
-| [ResNeXt 101 32x8d](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/resnext-101-32x8d.pth) |    87.4% |                       619 |
-| [WideResNet 50](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/wideresnet-50.pth)         |    87.7% |                       252 |
-| [WideResNet 101](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/wideresnet-101.pth)       |    87.7% |                       252 |
-| [EfficientNet B0](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/efficientnet-b0.pth)     |    87.4% |                       244 |
-| [EfficientNet B1](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/efficientnet-b1.pth)     |    87.7% |                       315 |
-| [EfficientNet B2](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/efficientnet-b2.pth)     |    88.2% |                       329 |
+For convinience, a collection of pre-trained models is provided. All models were trained using the following setu-up:
 
+* 1cycle scheduler with max LR selected with LR-range finder;
+* Batch
+
+
+| Model                                                                                                         | Accuracy | Training Time x Epoch (s) ✢ |
+|:--------------------------------------------------------------------------------------------------------------|---------:|----------------------------:|
+| [ResNeXt 50 32x4d](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/resnext-50-32x4d.pth)   |    87.4% |                         251 |
+| [ResNeXt 101 32x8d](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/resnext-101-32x8d.pth) |    87.4% |                         619 |
+| [WideResNet 50](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/wideresnet-50.pth)         |    87.7% |                         252 |
+| [WideResNet 101](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/wideresnet-101.pth)       |    87.7% |                         414 |
+| [EfficientNet B0](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/efficientnet-b0.pth)     |    87.4% |                         244 |
+| [EfficientNet B1](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/efficientnet-b1.pth)     |    87.7% |                         315 |
+| [EfficientNet B2](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/efficientnet-b2.pth)     |    88.2% |                         329 |
+
+
+✢ training on a NVIDIA® V100 Tensor Core GPU
 
 
 ## Limitations and Future Work
