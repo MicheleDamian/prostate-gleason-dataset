@@ -80,20 +80,20 @@ For convinience, a collection of PyTorch pre-trained models is provided:
 
 | Model | Accuracy | Training Time x Epoch (s)<sup>✦</sup> |
 |:------|---------:|--------------------------------------:|
-| [ResNeXt 50 32x4d<sup>✶</sup>](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/resnext-50-32x4d.pth)   | 87.4% | 251 |
-| [ResNeXt 101 32x8d<sup>✶</sup>](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/resnext-101-32x8d.pth) | 87.4% | 619 |
-| [WideResNet 50<sup>✶</sup>](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/wideresnet-50.pth)         | 87.7% | 252 |
-| [WideResNet 101<sup>✶</sup>](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/wideresnet-101.pth)       | 87.7% | 414 |
-| [EfficientNet B0<sup>✷</sup>](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/efficientnet-b0.pth)     | 87.4% | 244 |
-| [EfficientNet B1<sup>✷</sup>](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/efficientnet-b1.pth)     | 87.7% | 315 |
-| [EfficientNet B2<sup>✷</sup>](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/efficientnet-b2.pth)     | 88.2% | 329 |
+| ResNeXt 50 32x4d<sup>✶</sup> [[PyTorch]](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/resnext-50-32x4d.pth) [[ONNX]](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/resnext-50-32x4d.onnx)   | 87.4% | 251 |
+| ResNeXt 101 32x8d<sup>✶</sup> [[PyTorch]](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/resnext-101-32x8d.pth) [[ONNX]](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/resnext-101-32x8d.onnx) | 87.4% | 619 |
+| WideResNet 50<sup>✶</sup> [[PyTorch]](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/wideresnet-50.pth)         | 87.7% | 252 |
+| WideResNet 101<sup>✶</sup> [[PyTorch]](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/wideresnet-101.pth)       | 87.7% | 414 |
+| EfficientNet B0<sup>✷</sup> [[PyTorch]](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/efficientnet-b0.pth)     | 87.4% | 244 |
+| EfficientNet B1<sup>✷</sup> [[PyTorch]](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/efficientnet-b1.pth)     | 87.7% | 315 |
+| EfficientNet B2<sup>✷</sup> [[PyTorch]](https://prostate-gleason-dataset.s3-us-west-2.amazonaws.com/models/efficientnet-b2.pth)     | 88.2% | 329 |
 
 
 <sup>✦</sup> training on a NVIDIA® V100 Tensor Core GPU (batch size = 64)
 
-<sup>✶</sup> implementation by [pytorch](https://github.com/pytorch/vision/tree/master/torchvision/models) 
+<sup>✶</sup> implemented by [pytorch](https://github.com/pytorch/vision/tree/master/torchvision/models) 
 
-<sup>✷</sup> implementation by [lukemelas](https://github.com/lukemelas/EfficientNet-PyTorch) 
+<sup>✷</sup> implemented by [lukemelas](https://github.com/lukemelas/EfficientNet-PyTorch) 
 
 All models were trained using [mixed precision](https://arxiv.org/abs/1710.03740) and can be loaded with the standard procedure used in PyTorch:
 
